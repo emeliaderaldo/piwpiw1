@@ -1,0 +1,21 @@
+App.js > function App() {
+		return (
+			<Temperatura/>
+		);
+	}
+
+	export defalt App;
+
+
+const MeusDados = () => {
+    return ()
+}
+
+
+const MeusDados = () =>
+    <div>
+
+class MeusDados extends Component {
+    render() {
+        return ()
+}

@@ -1,0 +1,7 @@
+O PROPS DRILLING é um problema comum em aplicações React onde as propriedades (props) precisam ser passadas através de vários 
+níveis de componentes, como um pai tivesse vários filhos ao mesmo tempo, o que seria um problema. Se isso acontece pode deixar o codigo 
+complicado e confuso, e tambem pode haver problemas com atualizaçes e mudança de codigo.
+
+Para isso o Contexto é usado, ele faz com que os dados são compartilhados nos componentes sem precisar colocar os pros manualmente. 
+Um componente PAI compartilha dados entre seus componentes filhos automaticamente. 
+
