@@ -1,9 +1,13 @@
-//nessa funcao crio constantes de estado para as medias e para o loading, uma funcao para os alunos que tem as informaçoes 
-//dos alunos e das notas
+import { useEffect, useState } from "react"
 
-const Questao01A = () => {
+//nessa funcao crio constantes de estado para as medias e para o loading, uma funcao para os alunos que tem as informaçoes 
+//dos alunos e de suas notas
+
+const Questao01X = () => {
     const [medias, setMedias] = useState([]);
-    const [loading, setLoading] = useState(true);
+    // const [loading, setLoading] = useState(true);
+    
+
     const alunos = [
         { nome: "Sicrano", notas: { ap1: 8.4, ap2: 5.4 } },
         { nome: "Beltrano", notas: { ap1: 6.7, ap2: 3.5 } },
@@ -26,12 +30,12 @@ const Questao01A = () => {
     return (
         <div>
             <h2>Alunos Acima da Média</h2>
-            {loading ? <p>Carregando...</p> : renderAlunosAcimaMedia()}
+            {loading ? <p>Carregando..</p> : renderAlunosAcimaMedia()}
         </div>
     );
 };
 
-function Questao01B ({alunos}) {
+function Questao01Y ({alunos}) {
    // o useEffect serve para calcular e carregar as medias dos alunos 
     useEffect(() => {
         setLoading(true);
@@ -43,8 +47,12 @@ function Questao01B ({alunos}) {
     }, []);
 
     render() ;
-        return null;
+        return (
+            <div>
+                <h1> medias: {medias} </h1>
+            </div>
+        )
     
 }
 
-export default Questao01;
+export default Questao01X;
