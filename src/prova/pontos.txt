@@ -1,0 +1,4 @@
+questao 01 - 1,5
+questao 2 - 2,5
+questao 3 - 2,5
+questao 4 - 2,5
