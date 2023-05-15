@@ -4,13 +4,14 @@ import { useEffect, useState } from "react"
 
 const Pokemon = () => {
     const [srcImage, setScrImage] = useState(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png`);
-    const [virar, setVirar] = useState(false);
+    const [flag, setFlag] = useState(false); //atribui o valor da variavel como false para conseguir reverter esse valor e ela se tornar mutavel
 
     //useEffect serve para a variavel mudar a imagem com um if e else. 
 
     useEffect(
         () => {
-            if (virar == false) {
+
+            if (flag == false) { // aqui eh identificado o valor da variavel e qual imagem eh para aparecer, se eh a de frente ou a de costas
                 setScrImage(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png`);
 
             }
@@ -19,12 +20,12 @@ const Pokemon = () => {
             }
         }
         ,
-        [virar]
+        [flag]
     )
 
     return (
 
-        //aqui tem o botão com a imagem 
+        //aqui retornará o botão e a imagem 
 
         <div>
             <img
@@ -33,9 +34,9 @@ const Pokemon = () => {
                 style={{ width: "400px" }}
             />
             <button
-                onClick={() => setVirar((prev) => !prev)} //o prev serve para armazenar o valor anterior do botao e mudar para o inverso desse valor, o ponto de exclamação serve para isso.
+                onClick={() => setFlag((prev) => !prev)} //o prev serve para armazenar o valor anterior do botao e mudar para o inverso desse valor, o ponto de exclamação serve para isso.
             >
-                virar!
+                mexa o Pokemon
             </button>
         </div>
     )
