@@ -5,3 +5,7 @@ complicado e confuso, e tambem pode haver problemas com atualizaçes e mudança 
 Para isso o Contexto é usado, ele faz com que os dados são compartilhados nos componentes sem precisar colocar os pros manualmente. 
 Um componente PAI compartilha dados entre seus componentes filhos automaticamente. 
 
+Por exemplo, um caso que ha um codigo com muitos componentes aninhados que devem acessar informações do usuário,
+com dados de email, nome, conta bancaria etc. Para que o props não precise ser passado de usuario em usuario pode-se fazer 
+com Contexto de usuario, que fornecera esses dados para os componentes que necessitam consulta-los
+
